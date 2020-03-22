@@ -1,0 +1,29 @@
+#
+## BIP related services (Begin)
+#
+on property:vendor.mtk.md1.status=ready
+    start vendor.bip
+
+on property:vendor.mtk.md1.status=reset
+    stop vendor.bip
+
+on property:vendor.mtk.md1.status=stop
+    stop vendor.bip
+
+on property:vendor.mtk.md1.status=flightmode
+    stop vendor.bip
+
+on property:vendor.mtk.md1.status=exception
+    stop vendor.bip
+    
+service vendor.bip /vendor/bin/bip
+    class core
+    socket vendor.bip stream 660 root system
+    user root
+    group system log inet radio net_admin root
+    oneshot
+    disabled
+
+#
+## BIP related services (End)
+#

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<WHITELIST>
+    <PerfService>
+        <Package name="com.imangi.templerun2">
+            <Activity name="Common">
+                <CMD_SET_TA_BOOST_VALUE Param1="5"/>
+            </Activity>
+        </Package>
+        <Package name="com.andromeda.androbench2">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+                <CMD_SET_SCHED_BOOST Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.futuremark.pcmark.android.benchmark">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+                <CMD_SET_GPU_FREQ_MIN Param1="0"/>
+            </Activity>
+        </Package>
+        <Package name="com.antutu.ABenchMark">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.antutu.benchmark.full">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.primatelabs.geekbench">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.aurorasoftworks.quadrant.ui.professional">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.aurorasoftworks.quadrant.ui.advanced">
+            <Activity name="Common">
+                <CMD_SET_SPORTS_MODE Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.sgame">
+            <Activity name="Common">
+                <CMD_SET_PACK_BOOST_TIMEOUT Param1="25"/>
+                <CMD_SET_FBT_FLOOR_BOUND Param1="1"/>
+                <CMD_SET_FBT_KMIN Param1="10"/>
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+                <CMD_SET_CM_MGR Param1="1"/>
+            </Activity>
+        </Package>
+        <Package name="com.happyelements.AndroidAnimal.qq">
+            <Activity name="Common">
+                <CMD_SET_FSTB_FPS Param1="50" Param2="10"/>
+            </Activity>
+        </Package>
+        <Package name="com.happyelements.AndroidAnimal">
+            <Activity name="Common">
+                <CMD_SET_FSTB_FPS Param1="50" Param2="10"/>
+            </Activity>
+        </Package>
+        <Package name="my.beautyCamera">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.mobileqq">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="air.tv.douyu.android">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.meitu.makeup">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.netease.ko">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.netease.hyxd">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.maimiao.live.tv">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.cf">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.tencent.tmgp.pubgmhd">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+        <Package name="com.miHoYo.bh3twmycard">
+            <Activity name="Common">
+                <CMD_SET_THERMAL_POLICY Param1="8"/>
+            </Activity>
+        </Package>
+    </PerfService>
+</WHITELIST>

@@ -1,0 +1,131 @@
+on post-fs-data
+    mkdir /data/vendor/powerhal 0775 system system
+
+# EAS monitor
+    chown system system /dev/stune/schedtune.boost
+    chmod 0664 /dev/stune/schedtune.boost
+
+# BW monitor
+    chown system system /proc/fliperfs/cg_enable
+    chmod 0664 /proc/fliperfs/cg_enable
+    chown system system /proc/fliperfs/cg_threshold
+    chmod 0664 /proc/fliperfs/cg_threshold
+    chown system system /proc/fliperfs/cg_threshold_ddr3
+    chmod 0664 /proc/fliperfs/cg_threshold_ddr3
+    chown system system /proc/fliperfs/perf
+    chmod 0664 /proc/fliperfs/perf
+    chown system system /proc/fliperfs/perf_ddr3
+    chmod 0664 /proc/fliperfs/perf_ddr3
+    chown system system /proc/fliperfs/emi
+    chmod 0664 /proc/fliperfs/emi
+    chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/emi
+    chmod 0664 /proc/perfmgr/boost_ctrl/dram_ctrl/emi
+    chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
+    chmod 0664 /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
+
+
+# perfmgr
+    chown system system /proc/perfmgr/smart/smart_uevent_enable
+    chmod 0660 /proc/perfmgr/smart/smart_uevent_enable
+    chown system system /proc/perfmgr/smart/smart_force_isolate
+    chmod 0660 /proc/perfmgr/smart/smart_force_isolate
+    chown system system /proc/perfmgr/smart/app_is_sports
+    chmod 0660 /proc/perfmgr/smart/app_is_sports
+    chown system system /proc/perfmgr/smart/app_is_running
+    chmod 0660 /proc/perfmgr/smart/app_is_running
+    chown system system /proc/perfmgr/boost/cpuset_pid
+    chmod 0660 /proc/perfmgr/boost/cpuset_pid
+    chown system system /proc/perfmgr/eas/perfserv_ta_boost
+    chmod 0664 /proc/perfmgr/eas/perfserv_ta_boost
+    chown system system /proc/perfmgr/eas/perfserv_fg_boost
+    chmod 0664 /proc/perfmgr/eas/perfserv_fg_boost
+    chown system system /proc/perfmgr/eas/perfserv_bg_boost
+    chmod 0664 /proc/perfmgr/eas/perfserv_bg_boost
+    chown system system /sys/devices/system/cpu/eas/stune_task_thresh
+    chmod 0660 /sys/devices/system/cpu/eas/stune_task_thresh
+    chown system system /sys/module/ged/parameters/gx_force_cpu_boost
+    chmod 0660 /sys/module/ged/parameters/gx_force_cpu_boost
+    chown system system /sys/devices/system/cpu/eas/enable
+    chmod 0660 /sys/devices/system/cpu/eas/enable
+    chown system system /sys/module/ged/parameters/gx_top_app_pid
+    chmod 0660 /sys/module/ged/parameters/gx_top_app_pid
+    chown system system /proc/perfmgr/fbc
+    chmod 0664 /proc/perfmgr/fbc
+    chown system system /proc/perfmgr/legacy/perfserv_core
+    chmod 0664 /proc/perfmgr/legacy/perfserv_core
+    chown system system /proc/perfmgr/legacy/perfserv_freq
+    chmod 0664 /proc/perfmgr/legacy/perfserv_freq
+    chown system system /sys/module/ged/parameters/gx_3D_benchmark_on
+    chmod 0664 /sys/module/ged/parameters/gx_3D_benchmark_on
+    chown system system /proc/perfmgr/eas/perfserv_ext_launch_mon
+    chmod 0664 /proc/perfmgr/eas/perfserv_ext_launch_mon
+    chown system system /sys/devices/system/cpu/sched/idle_prefer
+    chmod 0664 /sys/devices/system/cpu/sched/idle_prefer
+    chown system system /dev/stune/top-app/schedtune.prefer_idle
+    chmod 0664 /dev/stune/top-app/schedtune.prefer_idle
+    chown system system /dev/stune/foreground/schedtune.prefer_idle
+    chmod 0664 /dev/stune/foreground/schedtune.prefer_idle
+    chown system system /dev/stune/io/schedtune.boost
+    chmod 0664 /dev/stune/io/schedtune.boost
+    chown system system /sys/devices/system/cpu/sched/sched_boost
+    chmod 0664 /sys/devices/system/cpu/sched/sched_boost
+    chown system system /dev/stune/background/schedtune.boost
+    chmod 0664 /dev/stune/background/schedtune.boost
+    chown system system /proc/perfmgr/eas/m_sched_migrate_cost_n
+    chmod 0664 /proc/perfmgr/eas/m_sched_migrate_cost_n
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_boost
+    chmod 0664 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_boost
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_boost
+    chmod 0664 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_boost
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_bg_boost
+    chmod 0664 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_bg_boost
+    chown system system /proc/perfmgr/boost_ctrl/cpu_ctrl/perfserv_freq
+    chmod 0664 /proc/perfmgr/boost_ctrl/cpu_ctrl/perfserv_freq
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ext_launch_mon
+    chmod 0664 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ext_launch_mon
+    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/m_sched_migrate_cost_n
+    chmod 0664 /proc/perfmgr/boost_ctrl/eas_ctrl/m_sched_migrate_cost_n
+    chown system system /sys/devices/system/cpu/sched/set_sched_tiny_task_force_filter
+    chmod 0664 /sys/devices/system/cpu/sched/set_sched_tiny_task_force_filter
+
+# PPM
+    chown system system /proc/ppm/policy_status
+    chmod 0664 /proc/ppm/policy_status
+    chown system system /proc/ppm/policy/userlimit_boost
+    chmod 0664 /proc/ppm/policy/userlimit_boost    
+
+# FPSGO
+    chown system system /dev/cpuset/top-app/cpus
+    chmod 0664 /dev/cpuset/top-app/cpus
+    chown system system /dev/stune/top-app/schedtune.prefer_idle
+    chmod 0664 /dev/stune/top-app/schedtune.prefer_idle
+    chown system system /sys/kernel/debug/fpsgo/common/fpsgo_game_enable
+    chmod 0664 /sys/kernel/debug/fpsgo/common/fpsgo_game_enable
+    chown system system /sys/kernel/debug/fpsgo/common/fpsgo_enable
+    chmod 0664 /sys/kernel/debug/fpsgo/common/fpsgo_enable
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_force_vag
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_force_vag
+    chown system system /sys/module/fbt_cpu/parameters/bhr_opp
+    chmod 0664 /sys/module/fbt_cpu/parameters/bhr_opp
+    chown system system /sys/module/fbt_cpu/parameters/bhr
+    chmod 0664 /sys/module/fbt_cpu/parameters/bhr
+    chown system system /sys/module/fbt_cpu/parameters/floor_bound
+    chmod 0664 /sys/module/fbt_cpu/parameters/floor_bound
+    chown system system /sys/module/fbt_cpu/parameters/kmin
+    chmod 0664 /sys/module/fbt_cpu/parameters/kmin
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_level
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_level
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_dfps_ceiling
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_dfps_ceiling
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_soft_level
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_soft_level
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_fps_list
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_fps_list
+    chown system system /proc/cm_mgr/dbg_cm_mgr
+    chmod 0664 /proc/cm_mgr/dbg_cm_mgr
+    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_fteh_list
+    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_fteh_list
+
+# NET
+    chown system system /proc/net/wlan/setCAM
+    chmod 0664 /proc/net/wlan/setCAM

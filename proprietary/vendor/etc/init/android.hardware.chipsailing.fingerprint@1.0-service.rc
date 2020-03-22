@@ -1,0 +1,2 @@
+on boot
+    chmod 0666 /dev/cs_spi

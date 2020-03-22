@@ -1,0 +1,2 @@
+com.mediatek.vnet
+com.hugeland.cdsplus

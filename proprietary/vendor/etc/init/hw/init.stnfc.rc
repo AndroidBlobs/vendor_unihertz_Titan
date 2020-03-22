@@ -1,0 +1,18 @@
+
+# This file needs to be executed by vendor_init at boot of the device,
+# both in normal and FM mode.
+
+# Start the HAL service in all modes (FM, meta, normal)
+on post-fs
+    start nfc_hal_service
+
+# For factory mode, nfcstackp to create the socket as vendor here
+on post-fs-data
+    mkdir /data/vendor/nfc_socket 0777 root root
+
+# In all modes, start STFlashTool at boot
+service stflashtool /vendor/bin/STFlashTool -c /vendor/etc/script_DB10mtk.txt
+    class late_start
+    user nfc
+    group radio
+    oneshot

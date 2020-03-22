@@ -1,0 +1,6 @@
+import vendor.mediatek.hardware.power@2.0-init.rc
+
+service power-hal-2-0 /vendor/bin/hw/vendor.mediatek.hardware.power@2.0-service
+    class hal
+    user system
+    group system readproc wifi media media_rw camera audio

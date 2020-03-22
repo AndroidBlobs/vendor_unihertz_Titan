@@ -1,0 +1,39 @@
+# MTK connectivity .rc configure
+
+on boot
+
+# WMT
+service wmt_loader /vendor/bin/wmt_loader
+    class core
+    user system
+    group system
+    oneshot
+
+service wmt_launcher /vendor/bin/wmt_launcher -p /vendor/firmware/
+    user system
+    group system
+    class core
+
+on property:ro.build.type=eng
+    write /sys/kernel/debug/tracing/tracing_on 1
+
+on property:persist.vendor.connsys.coredump.mode=1
+    start vendor.stp_dump
+
+on property:persist.vendor.connsys.coredump.mode=2
+    start vendor.stp_dump
+
+on property:persist.vendor.connsys.coredump.mode=0
+    stop vendor.stp_dump
+
+on property:vendor.connsys.driver.ready=yes && property:persist.vendor.connsys.coredump.mode=*
+    write /proc/driver/wmt_dbg "0x15 ${persist.vendor.connsys.coredump.mode}"
+
+on property:vendor.connsys.driver.ready=yes && property:debug.vendor.connsys.suspend.alarm=*
+    write /proc/driver/wmt_dbg "0x2e ${debug.vendor.connsys.suspend.alarm}"
+
+service vendor.stp_dump /system/bin/stp_dump3
+    user system
+    group system sdcard_rw misc
+    class core
+    disabled

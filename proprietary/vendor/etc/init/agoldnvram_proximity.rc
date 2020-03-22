@@ -1,0 +1,14 @@
+
+# [AGOLD][spl][20120420] AGOLD_PROX_CALI_ENABLE
+
+service nvram_proximity /vendor/bin/agoldnvram_proximity
+    class late_start
+    user root
+    group system
+    disabled
+    oneshot
+
+on property:vendor.service.nvram_daemon=stopped
+   start nvram_proximity
+
+#[AGOLD][end]

@@ -1,0 +1,33 @@
+This SW Support Peripherals Lists As Follow :;
+Gsensor Lists :;
+bmi160 (2020-01-07 12:47:57);
+
+Msensor Lists :;
+qmc7983 (2020-01-07 11:56:24);
+
+Gyrsensor Lists :;
+bmi160 (2020-01-07 12:47:57);
+
+ALS/PS Lists :;
+vcnl36822 (2020-01-07 11:56:24);
+
+Lcd Lists :;
+A61Qwerty46 (2020-01-07 12:52:22);
+
+TouchPanel Lists :;
+synaptics_33_50 (2020-01-07 12:52:23);
+
+Carmera Lists :;
+imx219_mipi_raw (2020-01-07 12:51:30);
+ov16880_mipi_raw (2020-01-07 12:51:30);
+
+Carmera Version Lists :;
+;
+
+Memory Lists :;
+KMDH6001DM_B422 (2020-01-07-11:55:26);
+KM3H6001CM_B515 (2020-01-07-11:55:26);
+KMDV6001DM_B620 (2020-01-07-11:55:26);
+KM3V6001CM_B705 (2020-01-07-11:55:26);
+H9HP16AECMMDAR (2020-01-07-11:55:26);
+KMWV50017M_B812 (2020-01-07-11:55:26);
